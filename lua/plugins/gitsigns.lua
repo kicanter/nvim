@@ -65,10 +65,10 @@ return {
                 map("n", "<leader>gD", function()
                     gitsigns.diffthis("@")
                 end, "[D]iff against last commit")
-                map("n", "<leader>gq", gitsigns.setqflist, "set [q]uickfix list for current file")
                 map("n", "<leader>gQ", function()
                     gitsigns.setqflist("all")
                 end, "set [Q]uickfix list for all files")
+                map("n", "<leader>gq", gitsigns.setqflist, "set [q]uickfix list for current file")
 
                 -- Trigger vim search for conflict markers
                 map("n", "<leader>g/", function()

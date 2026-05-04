@@ -7,13 +7,7 @@ return {
             local lint = require("lint")
             lint.linters_by_ft = {
                 markdown = { "markdownlint" },
-            }
-
-            -- markdownlint config
-            lint.linters.markdownlint.args = {
-                "--disable",
-                "MD013",
-                "--",
+                lua = { "selene" },
             }
             local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
             vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {

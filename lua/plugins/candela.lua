@@ -34,7 +34,8 @@ return {
     {
         ---@module "Candela"
         ---@type Candela.Config
-        "KieranCanter/candela.nvim",
+        "kicanter/candela.nvim",
+        dev = false,
         opts = {
             icons = {
                 nerd_font = true,
