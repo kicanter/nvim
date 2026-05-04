@@ -55,8 +55,10 @@ return {
 
                     -- enables treesitter based folds
                     -- for more info on folds see `:help folds`
-                    vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
-                    vim.wo.foldmethod = 'expr'
+                    vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+                    vim.wo.foldmethod = "expr"
+                    vim.opt.foldlevel = 99
+                    vim.opt.foldlevelstart = 99
 
                     -- enables treesitter based indentation
                     vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
@@ -206,6 +208,14 @@ return {
 
             local servers = {
                 clangd = {
+                    cmd = {
+                        "clangd",
+                        "--background-index",
+                        "--clang-tidy",
+                        "--header-insertion=iwyu",
+                        "--completion-style=detailed",
+                        "--function-arg-placeholders=true",
+                    },
                     root_markers = { ".clang-format", "compile_commands.json" },
                     capabilities = {
                         textDocument = {
