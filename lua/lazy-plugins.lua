@@ -13,7 +13,6 @@ require("lazy").setup({
     require("plugins/lint"),
     require("plugins/autopairs"),
     require("plugins/candela"),
-    require("plugins/kiron"), -- dev testing
 }, {
     dev = { path = "~/Dev" },
     ui = {
