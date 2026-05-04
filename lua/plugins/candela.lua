@@ -1,41 +1,26 @@
 local candela_keymaps = {
     {
         lhs = "<leader>cds",
-        rhs = "<Plug>CandelaUI",
+        rhs = "<Plug>CandelaUi",
         desc = "[Candela] toggle UI window",
     },
     {
-        lhs = "<leader>cda",
-        rhs = "<Plug>CandelaAdd",
-        desc = "[Candela] add pattern in UI",
-    },
-    {
-        lhs = "<leader>cdR",
+        lhs = "<leader>cdr",
         rhs = "<Plug>CandelaRefresh",
         desc = "[Candela] refresh patterns in current buffer",
     },
     {
-        lhs = "<leader>cdD",
+        lhs = "<leader>cdd",
         rhs = "<Plug>CandelaClear",
         desc = "[Candela] clear all patterns",
     },
     {
-        lhs = "<leader>cdM",
-        rhs = "<Plug>CandelaMatchAll",
-        desc = "[Candela] vim match all patterns",
-    },
-    {
-        lhs = "<leader>cdF",
-        rhs = "<Plug>CandelaFindAll",
-        desc = "[Candela] find all patterns and send to location list",
-    },
-    {
-        lhs = "<leader>cdL",
+        lhs = "<leader>cdl",
         rhs = "<Plug>CandelaLightbox",
         desc = "[Candela] toggle lightbox window",
     },
     {
-        lhs = "<leader>cd?",
+        lhs = "<leader>cdh",
         rhs = "<Plug>CandelaHelp",
         desc = "[Candela] open help menu",
     },
@@ -47,7 +32,13 @@ end
 
 return {
     {
+        ---@module "Candela"
+        ---@type Candela.Config
         "KieranCanter/candela.nvim",
-        opts = {},
+        opts = {
+            icons = {
+                nerd_font = true,
+            }
+        },
     },
 }

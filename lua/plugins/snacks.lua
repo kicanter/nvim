@@ -40,6 +40,8 @@ return {
     { "grr", function() Snacks.picker.lsp_references() end, nowait = true, desc = "Goto LSP [r]eferences" },
     { "gri", function() Snacks.picker.lsp_implementations() end, desc = "Goto LSP [i]mplementation" },
     { "grt", function() Snacks.picker.lsp_type_definitions() end, desc = "Goto LSP [t]ype Definition" },
+    { "grci", function() Snacks.picker.lsp_incoming_calls() end, desc = "Goto LSP [c]alls [i]ncoming" },
+    { "grco", function() Snacks.picker.lsp_type_definitions() end, desc = "Goto LSP [c]alls [o]utgoing" },
     { "grs", function() Snacks.picker.lsp_symbols() end, desc = "LSP [s]ymbols" },
     { "grS", function() Snacks.picker.lsp_workspace_symbols() end, desc = "LSP Workspace [S]ymbols" },
     -- Helpful for dev

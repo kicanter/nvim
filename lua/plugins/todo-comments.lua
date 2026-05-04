@@ -9,5 +9,27 @@ return {
     "folke/todo-comments.nvim",
     event = "VimEnter",
     dependencies = { "nvim-lua/plenary.nvim" },
-    opts = {},
+    opts = {
+        keywords = {
+            FIX = {
+                alt = { "Fix", "fix", "BUG", "Bug", "bug" },
+            },
+            TODO = { alt = { "Todo", "todo" } },
+            NOTE = { alt = { "Note", "note", "INFO", "Info", "info" } },
+        },
+        highlight = {
+            pattern = [[.*<(KEYWORDS)\s*[^:]*:]],
+            keyword = "bg",
+        },
+        search = {
+            pattern = [[\b(KEYWORDS)(\(.*\))?:]],
+            args = {
+                "--color=never",
+                "--no-heading",
+                "--with-filename",
+                "--line-number",
+                "--column",
+            },
+        },
+    },
 }
