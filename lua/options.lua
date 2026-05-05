@@ -78,3 +78,6 @@ vim.opt.termguicolors = true
 
 -- Allow cursor to move where there is no text in visual block mode
 vim.opt.virtualedit = "block"
+
+-- Enable ui2 from 0.12
+require("vim._core.ui2").enable()
